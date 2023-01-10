@@ -4,14 +4,16 @@ import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <main className="">
       <Head>
         <title>PC_Station</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      eae
-    </div>
+      <div>
+        
+      </div>
+    </main>
   )
 }
 
