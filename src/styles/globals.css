@@ -25,3 +25,18 @@
     background-image: linear-gradient(to right, black, rgb(89, 85, 85));
   }
 }
+
+.scrollex::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+  height: 8px;
+}
+
+.scrollex::-webkit-scrollbar-track {
+  background: rgb(5, 209, 192);        /* color of the tracking area */
+}
+
+.scrollex::-webkit-scrollbar-thumb {
+  background-color: rgb(25, 180, 151);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 4px solid rgb(219, 9, 188);  /* creates padding around scroll thumb */
+}

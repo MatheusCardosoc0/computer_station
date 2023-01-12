@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
       <div className='flex flex-wrap gap-10'>
         <Promotion image='https://shopinfo.vteximg.com.br/arquivos/ids/1305406-1000-1000/1.png?v=637781462015600000'
-        discount={25}>
+          discount={25}>
           <span className='text-2xl'>Pc Gamer Neologic NLI234 intel</span>
           <ul>
             <li>i5-9400F 8gb</li>
@@ -23,12 +23,14 @@ const Home: NextPage = () => {
           </ul>
         </Promotion>
         <Promotion image='https://sndecommerceimage.azureedge.net/content/Images/thumbs/0055359_placa-de-video-geforce-gtx-1060-3gb-gddr5-192-bit-gv-n1060wf2oc-3gd_550.png'
-        discount={30} >
+          discount={30} >
           <span className='text-2xl'>Placa de video Nvidia GeForce</span>
         </Promotion>
       </div>
 
-      <Products />
+      <div className='overflow-x-scroll w-[70%] mx-auto scrollex'>
+        <Products />
+      </div>
     </main>
   )
 }
