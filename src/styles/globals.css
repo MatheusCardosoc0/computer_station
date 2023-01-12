@@ -7,7 +7,7 @@
   background-image: linear-gradient(to right, black, aqua, yellow, purple, red, green);
   animation: rgbeffect 8s ease-in infinite;
   transition: all 2s;
-  filter: blur(2px)
+  filter: blur(0px)
 }
 
 
