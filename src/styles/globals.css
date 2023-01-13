@@ -10,7 +10,6 @@
   filter: blur(0px)
 }
 
-
 @keyframes rgbeffect {
   10%{
     background-image: linear-gradient(to right, black, rgb(47, 222, 24), rgb(183, 33, 209), rgb(246, 201, 22), rgb(37, 242, 225), rgb(128, 9, 0));

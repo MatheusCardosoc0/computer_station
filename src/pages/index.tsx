@@ -28,8 +28,8 @@ const Home: NextPage = () => {
         </Promotion>
       </div>
 
-      <div className='overflow-x-scroll w-[70%] mx-auto scrollex'>
-        <Products />
+      <div className='overflow-x-scroll w-[70%] mx-auto scrollex mt-16'>
+        <Products  />
       </div>
     </main>
   )
