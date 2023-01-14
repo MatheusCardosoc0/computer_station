@@ -12,14 +12,12 @@ const Product = () => {
 
   const id = useRouter()
 
-  const {products, setProducts} = useDataContext()
+  const {products} = useDataContext()
 
   const [productActual, setProductActual] = useState<productProps |null | undefined>(null)
 
   async function getProduct() {
     const array = products.find(product => product.id === id.query.id)
-
-    console.log(array)
 
     setProductActual(array)
   }
