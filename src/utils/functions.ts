@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export function EstructurePrice(price: number){
-  const string = price.toString()
+  const string = price?.toString()
   const result = string.slice(0, -2) + '.' + string.slice(-2)
   return result
 }

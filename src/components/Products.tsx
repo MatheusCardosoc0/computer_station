@@ -30,7 +30,7 @@ const Products = ({idProduct} : ProdProps) => {
   return (
     <section className='flex justify-center gap-5 w-[5rem] md:w-full max-w-[1258px] pb-10'>
       {products?.map(product => (
-        <CardProducts product={product} />
+        <CardProducts key={product.id} product={product} />
       ))}
     </section>
   )

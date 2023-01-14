@@ -6,7 +6,7 @@ import { productProps } from '../utils/Interfaces'
 
 const ProductEmphasis = ({ product }: { product: productProps | null | undefined }) => {
 
-  const {setProductInCart} = useDataContext()
+  const {setProductInCart, addOrRemoveValue} = useDataContext()
 
   return (
     <section className='flex gap-2'>
@@ -15,7 +15,7 @@ const ProductEmphasis = ({ product }: { product: productProps | null | undefined
 
         <div className='flex justify-center gap-3 p-2'>
           {Colors.map(color => (
-            <button className={`${color.color} w-[50px] rounded-lg h-[50px] block`} />
+            <button key={color.color} className={`${color.color} w-[50px] rounded-lg h-[50px] block`} />
           ))}
         </div>
       </div>
@@ -32,7 +32,7 @@ const ProductEmphasis = ({ product }: { product: productProps | null | undefined
         </span>
 
         <button className='bg-gradient-to-b from-teal-500 to-green-600 rounded-lg w-[300px] text-2xl mx-auto drop-shadow-[2px_2px_0px_black] p-2'
-        onClick={() => setProductInCart((prev: productProps[]) =>[...prev, { ...product }])}>
+        onClick={() => product && addOrRemoveValue(product)}>
           <b className='drop-shadow-[1px_1px_1px_black]'>
             Adicionar ao carrinho
           </b>

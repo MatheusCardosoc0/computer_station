@@ -7,6 +7,8 @@ export interface InitialValueProps{
   setIsCartMenuActivate: any
   productInCart: productProps[] | null | undefined
   setProductInCart: any
+  addOrRemoveValue: (product: productProps, remove?: boolean) => void
+  totalValue: number
 }
 
 export const InitialValue = {
@@ -16,4 +18,6 @@ export const InitialValue = {
   setIsCartMenuActivate: () => {},
   productInCart: [],
   setProductInCart: () => {},
+  addOrRemoveValue: () => {},
+  totalValue: 0
 }

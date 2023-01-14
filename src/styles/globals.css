@@ -35,7 +35,6 @@
 }
 
 .scrollex::-webkit-scrollbar-thumb {
-  background-color: rgb(25, 180, 151);    /* color of the scroll thumb */
+  background-color: rgb(179, 94, 248);    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 4px solid rgb(219, 9, 188);  /* creates padding around scroll thumb */
 }
