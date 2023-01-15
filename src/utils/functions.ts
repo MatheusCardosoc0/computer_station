@@ -1,4 +1,5 @@
 import axios from "axios"
+import { BaseUrl } from "./BaseUrl"
 
 export function EstructurePrice(price: number){
   const string = price?.toString()
@@ -8,7 +9,7 @@ export function EstructurePrice(price: number){
 
 
 export async function getProductsInServer(id?: string){
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
+  const baseUrl = BaseUrl
   try {
     if(id){
       const products = await axios.get(`${baseUrl}/api/product/${id}`)

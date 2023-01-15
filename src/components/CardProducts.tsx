@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import React from 'react'
+import { BaseUrl } from '../utils/BaseUrl'
 import { EstructurePrice } from '../utils/functions'
 import { productProps } from '../utils/Interfaces'
 
 const CardProducts = ({product} : {product: productProps}) => {
   return (
-    <Link href={`http://localhost:3000/product/${product.id}`}
+    <Link href={`${BaseUrl}/product/${product.id}`}
      className='bg-gradient-to-tr from-purple-600 to-green-500 rounded-lg w-[16rem] p-2 cursor-pointer hover:brightness-150'>
       <img className='w-[14rem]'
        src={product.imageUrl} />
