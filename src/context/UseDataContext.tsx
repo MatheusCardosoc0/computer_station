@@ -1,4 +1,5 @@
 import React, { createContext, ReactNode, useContext, useState } from 'react'
+import { toast } from 'react-toastify'
 import { productProps } from '../utils/Interfaces'
 import { InitialValue, InitialValueProps } from './InitialValue'
 
@@ -20,6 +21,7 @@ export const UseDataContextProvider = ({ children }: { children: ReactNode }) =>
 
           const Delete = productInCart.filter(prodc => prodc !== product)
           setProductInCart(Delete)
+          toast.success(`${product.name} removido do carrinho`)
         }
       })
 
@@ -27,6 +29,7 @@ export const UseDataContextProvider = ({ children }: { children: ReactNode }) =>
     } else {
       setProductInCart((prev: productProps[]) => [...prev, { ...product }])
       setTotalValue(prev => prev + product.price)
+      toast.success(`${product.name} adicionado ao carrinho`)
     }
   }
 

@@ -1,12 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { ToastContainer } from 'react-toastify'
 import Products from '../components/Products'
 import Promotion from '../components/Promotion'
 
 const Home: NextPage = () => {
   return (
     <main className="">
+     
       <Head>
         <title>PC_Station</title>
         <link rel="icon" href="/favicon.ico" />
@@ -29,7 +31,7 @@ const Home: NextPage = () => {
       </div>
 
       <div className='overflow-x-scroll w-[70%] mx-auto scrollex mt-16'>
-        <Products  />
+        <Products />
       </div>
     </main>
   )

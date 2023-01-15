@@ -6,11 +6,15 @@ import ProductInCartCard from './ProductInCartCard'
 
 export const CartIcon = () => {
 
-  const { setIsCartMenuActivate } = useDataContext()
+  const { setIsCartMenuActivate, productInCart, isCartMenuActivate } = useDataContext()
 
   return (
     <button onClick={() => setIsCartMenuActivate((prev: boolean) => setIsCartMenuActivate(!prev))}>
-      <BsFillCartFill />
+      <BsFillCartFill className={`${isCartMenuActivate && 'text-yellow-400'} hover:text-yellow-400`} />
+
+      <span className='absolute top-0 right-0 bg-blue-500 rounded-full text-sm font-bold w-[20px] h-[20px]'>
+        {productInCart?.length }
+      </span>
     </button>
   )
 }
@@ -47,7 +51,7 @@ export const CartMenu = () => {
             R${EstructurePrice(totalValue)}
             </b>
           </p>
-          <button className='text-xl text-white p-2 bg-green-500 rounded-lg drop-shadow-[2px_2px_20px_teal] mb-28'>
+          <button className='text-xl text-white p-2 bg-green-500 rounded-lg drop-shadow-[2px_2px_20px_teal] mb-28 hover:bg-yellow-400 hover:text-green-500 hover:drop-shadow-[2px_2px_20px_cyan]'>
             <b className='drop-shadow-[1px_1px_1px_black]'>
               Fechar compra
             </b>

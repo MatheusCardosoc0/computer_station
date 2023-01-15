@@ -6,7 +6,7 @@ import { productProps } from '../utils/Interfaces'
 const CardProducts = ({product} : {product: productProps}) => {
   return (
     <Link href={`http://localhost:3000/product/${product.id}`}
-     className='bg-gradient-to-tr from-purple-600 to-green-500 rounded-lg w-[16rem] p-2 cursor-pointer'>
+     className='bg-gradient-to-tr from-purple-600 to-green-500 rounded-lg w-[16rem] p-2 cursor-pointer hover:brightness-150'>
       <img className='w-[14rem]'
        src={product.imageUrl} />
 
